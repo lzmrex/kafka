@@ -1,4 +1,4 @@
-**场景：** consumerA订阅topicA, consumerA部署在三个pod节点，有独立的用户名密码，groupId=abc, consumerB订阅topicB, consumerB部署在三个pod节点，有独立的用户名密码，groupId=abc。topicA 和 topicB 在同一个kafka集群。**
+**场景：** consumerA订阅topicA, consumerA部署在三个pod节点，有独立的用户名密码，groupId=abc, consumerB订阅topicB, consumerB部署在三个pod节点，有独立的用户名密码，groupId=abc。topicA 和 topicB 在同一个kafka集群。
 
 这个场景有一个**非常关键的误区需要先纠正**：
 👉 **Kafka 的消费分配（rebalance）只看 `group.id`，完全不关心你订阅的是哪个 topic、用户名密码、还是应用名字。**
